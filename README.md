@@ -25,10 +25,10 @@
 * 首页
 ![](https://i.loli.net/2021/03/29/Npsz5QAdrnCHa4t.png)
 * 信息列表
-![](https://i.loli.net/2021/03/29/UJ9Kqr3ZVQsoc84.png)
+![](https://i.loli.net/2021/03/29/LJ82ijnDpcukRNg.png)
 * 添加信息
 ![](https://i.loli.net/2021/03/29/R9xGV1rolfvAzOd.png)
-* 修改信息
-![](https://i.loli.net/2021/03/29/LJ82ijnDpcukRNg.png)
+* 更新信息
+![](https://i.loli.net/2021/03/29/UJ9Kqr3ZVQsoc84.png)
 * 删除信息
 ![](https://i.loli.net/2021/03/29/jZ9vgMaD7KsRJIp.png)
