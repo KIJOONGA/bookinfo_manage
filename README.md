@@ -1,4 +1,4 @@
-# bookinfo_manage
+> # bookinfo_manage
 使用Java+JDBC+JSP+Servlet实现的图书管理系统
 
 ## 关于版本
