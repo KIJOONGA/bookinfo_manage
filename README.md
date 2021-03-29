@@ -17,5 +17,18 @@
 
 ## 反思
 * Servlet使得代码量冗长
+* 没有实现对列表页的快速查找
 * 实现图书列表的分页功能较麻烦
 * 没有实现数据库报错在页面的显示
+
+## 页面展示
+* 首页
+![](https://i.loli.net/2021/03/29/Npsz5QAdrnCHa4t.png)
+* 信息列表
+![](https://i.loli.net/2021/03/29/UJ9Kqr3ZVQsoc84.png)
+* 添加信息
+![](https://i.loli.net/2021/03/29/R9xGV1rolfvAzOd.png)
+* 修改信息
+![](https://i.loli.net/2021/03/29/LJ82ijnDpcukRNg.png)
+* 删除信息
+![](https://i.loli.net/2021/03/29/jZ9vgMaD7KsRJIp.png)
