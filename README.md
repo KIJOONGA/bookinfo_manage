@@ -19,3 +19,5 @@
 * Servlet使得代码量冗长
 * 实现图书列表的分页功能较麻烦
 * 没有实现数据库报错在页面的显示
+
+![](<a href="https://sm.ms/image/pzYhy6CjstJqwKL" target="_blank"><img src="https://i.loli.net/2021/03/29/pzYhy6CjstJqwKL.png" ></a>)
