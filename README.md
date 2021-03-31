@@ -2,7 +2,7 @@
 使用Java+JDBC+JSP+Servlet实现的图书管理系统
 
 ## 关于版本
-* Java-1.8.0_281
+* Java-15.0.1
 * Tomcat 9.0
 * mysql-connector-java-8.0.23(MYSQL 8.0.23)
 * jquery-3.5.1
@@ -28,7 +28,7 @@
 ![](https://i.loli.net/2021/03/29/jZ9vgMaD7KsRJIp.png)
 
 ## 反思
-* Servlet使得代码量冗长
+* Servlet使得编程过程繁琐
 * 没有实现对列表页的快速查找
 * 实现图书列表的分页功能较麻烦
 * 没有实现数据库报错在页面的显示
