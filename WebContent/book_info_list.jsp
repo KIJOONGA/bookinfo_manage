@@ -37,6 +37,11 @@ String path = request.getContextPath();
 				+ " " + h + ":" + m + ":" + s + " " + weekday[day];
 		t = setTimeout(time, 1000);
 	}
+	
+	function del(action) {
+		document.form.action = action;
+		$("#SmallModal").modal("show");
+	}
 </script>
 </head>
 
@@ -49,7 +54,7 @@ String path = request.getContextPath();
 					<button type="button" class="navbar-toggle collapsed"
 						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
 						aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span> <span
+						<span class="sr-only"></span> <span
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
@@ -72,37 +77,37 @@ String path = request.getContextPath();
 				</div>
 			</div>
 			<div class="col-md-9">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>序号</th>
-							<th>ISBN号码</th>
-							<th>书名</th>
-							<th>作者</th>
-							<th>价格</th>
-							<th>图书类型编号</th>
-							<th>出版社</th>
-							<th>操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${bookInfoList }" var="entity"
-							varStatus="status">
+				<form name="form" method="post"> 
+					<table class="table">
+						<thead>
 							<tr>
-								<td>${entity.id }</td>
-								<!--status.index + 1-->
-								<td>${entity.bookISBN }</td>
-								<td>${entity.bookName }</td>
-								<td>${entity.author }</td>
-								<td>${entity.price }</td>
-								<td>${entity.typeId }</td>
-								<td>${entity.publisher }</td>
-								<td><a href="<%=path %>/bookInfoUpdate?id=${entity.id }">更新</a>
-									<a style="color: black">┆</a> 
-									<a style="color: red" data-toggle="modal" data-target=".bs-example-modal-sm">删除</a>
-									<c:if test="${status.index == 0}">
+								<th>序号</th>
+								<th>ISBN号码</th>
+								<th>书名</th>
+								<th>作者</th>
+								<th>价格</th>
+								<th>图书类型编号</th>
+								<th>出版社</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${bookInfoList }" var="entity"
+								varStatus="status">
+								<tr>
+									<td>${entity.id }</td>
+									<!--status.index + 1-->
+									<td>${entity.bookISBN }</td>
+									<td>${entity.bookName }</td>
+									<td>${entity.author }</td>
+									<td>${entity.price }</td>
+									<td>${entity.typeId }</td>
+									<td>${entity.publisher }</td>
+									<td><a href="<%=path %>/bookInfoUpdate?id=${entity.id }">更新</a>
+										<a style="color: black">┆</a>
+										<a style="color: red" id="delete" onclick="del('<%=path %>/bookInfoDelete?id=${entity.id }')">删除</a>
 										<div class="modal fade bs-example-modal-sm" tabindex="-1"
-										role="dialog" aria-labelledby="mySmallModalLabel" >
+										role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="SmallModal">
 											<div class="modal-dialog modal-sm" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
@@ -116,17 +121,17 @@ String path = request.getContextPath();
 													<div class="modal-footer">
 														<button type="button" class="btn btn-default"
 															data-dismiss="modal">放弃</button>
-														<a href="<%=path %>/bookInfoDelete?id=${entity.id }" class="btn btn-primary" role="button">确认</a>
+														<button type="submit" class="btn btn-primary">确认</button>
 													</div>
 												</div>
 											</div>
 										</div>
-                                    </c:if>		
-								</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
+									</td>
+								</tr>
+							</c:forEach>	
+						</tbody>
+					</table>
+				</form>
 			</div>
 		</div>
 	</div>
